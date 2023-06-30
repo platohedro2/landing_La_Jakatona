@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "A wonderful hackathon",
+    description:
+      "The largest hackathon ever held in the city of Medellín, will take place. It's will revolve around Ethereum and its Layer 2 solutions.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "1 challenge",
+    description:
+      "In the hackathon, participants will be required to create a product or service that solves a Latin American problem.",
+    icon: "bx:bxs-bot",
+  }, 
+  {
+    title: "2 keynote talks",
+    description:
+      "The opening and closing of the event will be conducted by 2 prominent and famous international speakers.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "4 talks during the hackathon",
+    description:
+      "During the event, 4 talks will be given on specific topics: scalability, ZKs, privacity and security.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "2 workshops",
+    description:
+      "Two workshops on Ethereum will be held to educate the audience about the subject matter. Ethereum scalability!",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "+100 developers",
+    description:
+      "The event is planned to have the attendance of over 100 developers from Latin America and the world.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0" align="center">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Resume for our hackathon
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    The most iconic and largest hackathon in the entire city of Medellín, Colombia. Imposibble to miss!
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
