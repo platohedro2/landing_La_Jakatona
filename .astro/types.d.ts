@@ -194,44 +194,44 @@ declare module 'astro:content' {
   slug: "complete-guide-fullstack-development";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "essential-data-structures-algorithms.md": {
 	id: "essential-data-structures-algorithms.md";
   slug: "essential-data-structures-algorithms";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-to-become-frontend-master.md": {
 	id: "how-to-become-frontend-master.md";
   slug: "how-to-become-frontend-master";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
 "team": {
+"dotlabs().md": {
+	id: "dotlabs().md";
+  slug: "dotlabs";
+  body: string;
+  collection: "team";
+  data: InferEntrySchema<"team">
+} & { render(): Render[".md"] };
 "jjcampuzano.md": {
 	id: "jjcampuzano.md";
   slug: "jjcampuzano";
   body: string;
   collection: "team";
-  data: any
+  data: InferEntrySchema<"team">
 } & { render(): Render[".md"] };
 "juandaveth.md": {
 	id: "juandaveth.md";
   slug: "juandaveth";
   body: string;
   collection: "team";
-  data: any
-} & { render(): Render[".md"] };
-"robert-palmer.md": {
-	id: "robert-palmer.md";
-  slug: "robert-palmer";
-  body: string;
-  collection: "team";
-  data: any
+  data: InferEntrySchema<"team">
 } & { render(): Render[".md"] };
 };
 
@@ -243,5 +243,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }
