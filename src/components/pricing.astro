@@ -1,6 +1,7 @@
 ---
 import { Tick } from "@components/ui/icons";
 import Link from "@components/ui/link.astro";
+import Tabla from "./tabla.astro";
 
 const { plan } = Astro.props;
 ---
@@ -41,5 +42,7 @@ const { plan } = Astro.props;
         {plan.button.text || "Get Started"}
       </Link>
     </div>
+
+    <Tabla></Tabla>
   </div>
 </div>

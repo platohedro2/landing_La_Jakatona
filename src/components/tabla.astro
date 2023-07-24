@@ -1,0 +1,29 @@
+<!-- TablaComponent.astro -->
+---
+export let data = [
+  { col1: "Dato 1", col2: "Dato 2", col3: "Dato 3" },
+  { col1: "Dato A", col2: "Dato B", col3: "Dato C" },
+  // Agrega más filas según tus necesidades.
+];
+---
+
+<table class="table-auto w-full">
+  <!-- Encabezado de la tabla -->
+  <thead>
+    <tr>
+      <th class="px-4 py-2">Columna 1</th>
+      <th class="px-4 py-2">Columna 2</th>
+      <th class="px-4 py-2">Columna 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      <!-- Iteración para cada elemento en "data" -->
+      <tr class="border-t">
+        <td class="px-4 py-2">vvv</td>
+        <td class="px-4 py-2">bbb</td>
+        <td class="px-4 py-2">ffffff</td>
+      </tr>
+   
+  </tbody>
+</table>
